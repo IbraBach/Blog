@@ -1,0 +1,14 @@
+<table>
+    <tr *ngFor="let g of entradasList">
+        <td>
+            {{g.id}}
+        </td>
+        <td>
+            {{g.titulo}}
+        </td>
+        <td (click)="deleteEntrada(g.id)">
+            <button>Borra</button>
+            
+        </td>
+    </tr>
+</table>

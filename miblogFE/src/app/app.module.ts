@@ -9,8 +9,10 @@ import { MainComponent } from './main/main.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ListadoComponent } from './entradas/listado/listado.component';
 import { CrearComponent } from './entradas/crear/crear.component';
-import { HttpClient } from 'selenium-webdriver/http';
 import { DetallesComponent } from './entradas/detalles/detalles.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { EntradasModule } from './entradas/entradas.module';
+
 
 @NgModule({
   declarations: [
@@ -26,7 +28,10 @@ import { DetallesComponent } from './entradas/detalles/detalles.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+    EntradasModule
   ],
   providers: [],
   bootstrap: [AppComponent]

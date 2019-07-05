@@ -14,10 +14,15 @@ export class MainComponent implements OnInit {
     ngOnInit() {
         this.getEntradasList();
     }
-  getEntradasList() {
-    this.entradaService.getEntradasList().subscribe(data => {
-      this.entradasList = data;
-    });
-  }
+    getEntradasList() {
+        this.entradaService.getEntradasList().subscribe(data => {
+            this.entradasList = data;
+        });
+    }
+    deleteEntrada(entrada){
+        this.entradaService.deleteEntrada(entrada).subscribe( data => {
+            this.getEntradasList();
+        });
+    };
 
 }
